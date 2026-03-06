@@ -58,8 +58,8 @@ export const premiumBrands = [
 "Juvederm® Voluma",
 "Restylane® Kysse",
 "Belotero® Balance",
-"Stylage®",
-"Teosyal®"];
+"Stylage®", ""];
+
 
 
 export const beforeAfterGallery = [
