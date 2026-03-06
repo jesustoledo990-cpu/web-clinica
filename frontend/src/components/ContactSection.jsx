@@ -225,7 +225,7 @@ export const ContactSection = () => {
                   <Phone className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: 'var(--text-primary)' }} />
                   <div>
                     <p className="body-large font-bold mb-1">Teléfono</p>
-                    <a href={`tel:${clinicInfo.phone}`} className="+56 9 8304 9976" style={{ color: 'var(--text-secondary)' }}>
+                    <a href={`tel:${clinicInfo.phone}`} className="+56 9 8304 9976 !text-[#4A6B7C]" style={{ color: 'var(--text-secondary)' }}>
                       {clinicInfo.phone}
                     </a>
                   </div>
