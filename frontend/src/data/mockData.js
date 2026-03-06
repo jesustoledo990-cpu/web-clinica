@@ -54,9 +54,9 @@ export const services = [
 }];
 
 
-export const premiumBrands = ["Juvederm\xAE ",
+export const premiumBrands = ["Juvederm\xAE ", "Maili\xAE ",
 
-"Restylane® Kysse",
+
 "Belotero® Balance",
 "Stylage®", ""];
 
