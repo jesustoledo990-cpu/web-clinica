@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion';
-import { Calendar } from 'lucide-react';
 import { faqs } from '../data/mockData';
-import { BookingCalendar } from './BookingCalendar';
 
 export const FAQSection = () => {
-  const [showBooking, setShowBooking] = useState(false);
+  const scrollToContact = () => {
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+  };
   
   return (
     <section id="faq" className="section-padding" style={{ background: 'var(--bg-secondary)' }}>
@@ -52,16 +52,13 @@ export const FAQSection = () => {
             ¿Tienes más preguntas?
           </p>
           <button 
-            onClick={() => setShowBooking(true)}
+            onClick={scrollToContact}
             className="btn-primary"
           >
-            <Calendar className="w-4 h-4 mr-2 inline-block" />
-            Agendar Evaluación Premium
+            Contactar al Especialista
           </button>
         </div>
       </div>
-      
-      {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
     </section>
   );
 };

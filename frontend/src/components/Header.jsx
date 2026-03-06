@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Calendar } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { clinicInfo } from '../data/mockData';
-import { BookingCalendar } from './BookingCalendar';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showBooking, setShowBooking] = useState(false);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -15,17 +13,22 @@ export const Header = () => {
     }
   };
 
+  const handleWhatsApp = () => {
+    const message = encodeURIComponent('Hola Dr. Madrigal, me gustaría agendar una evaluación.');
+    window.open(`https://wa.me/${clinicInfo.whatsapp}?text=${message}`, '_blank');
+  };
+
   return (
     <header className="navigation-header">
       <div className="container">
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center">
-            <img
-              src={clinicInfo.logo}
+            <img 
+              src={clinicInfo.logo} 
               alt="Dr. J. Madrigal"
-              className="h-12 w-auto !mx-[10px] !rounded-t-[200px] !rounded-b-[200px] !rounded-l-[200px] !rounded-r-[200px]"
-              style={{ maxHeight: '48px' }} />
-
+              className="h-20 w-auto"
+              style={{ maxHeight: '80px' }}
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -59,8 +62,7 @@ export const Header = () => {
               <Phone className="w-4 h-4" />
               {clinicInfo.phone}
             </a>
-            <button onClick={() => setShowBooking(true)} className="btn-primary">
-              <Calendar className="w-4 h-4 mr-2 inline-block" />
+            <button onClick={handleWhatsApp} className="btn-primary">
               Reservar Evaluación
             </button>
           </div>
@@ -69,15 +71,15 @@ export const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2"
-            aria-label="Toggle menu">
-
+            aria-label="Toggle menu"
+          >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen &&
-        <nav className="lg:hidden pt-6 pb-4">
+        {isMenuOpen && (
+          <nav className="lg:hidden pt-6 pb-4">
             <ul className="flex flex-col gap-4">
               <li>
                 <button onClick={() => scrollToSection('servicios')} className="navigation-link">
@@ -106,17 +108,14 @@ export const Header = () => {
                 </a>
               </li>
               <li>
-                <button onClick={() => setShowBooking(true)} className="btn-primary w-full">
-                  <Calendar className="w-4 h-4 mr-2 inline-block" />
+                <button onClick={handleWhatsApp} className="btn-primary w-full">
                   Reservar Evaluación
                 </button>
               </li>
             </ul>
           </nav>
-        }
+        )}
       </div>
-      
-      {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
-    </header>);
-
+    </header>
+  );
 };
