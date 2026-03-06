@@ -19,53 +19,54 @@ code {
 
 @layer base {
     :root {
-        /* Primary Backgrounds - Warm foundation */
-        --bg-primary: #fffef2;
-        --bg-secondary: #f6f5e8;
-        --bg-subtle: #ebeade;
+        /* Primary Backgrounds - Clean Blue & White */
+        --bg-primary: #ffffff;
+        --bg-secondary: #e8f4f8;
+        --bg-accent: #d0e8f2;
+        --bg-subtle: #f0f9fc;
         
-        /* Text Hierarchy - Rich contrast */
-        --text-primary: #333333;
-        --text-secondary: #666666;
-        --text-light: #bcbbb4;
-        --text-meta: #4a4a4a;
+        /* Text Hierarchy - Blue tones */
+        --text-primary: #1a3a52;
+        --text-secondary: #4a6b7c;
+        --text-light: #8fa9b8;
+        --text-meta: #5a7a8a;
         
-        /* Interactive States */
-        --interactive-base: #333333;
-        --interactive-hover: #000000;
-        --focus-outline: #252525;
+        /* Interactive States - Vibrant Blue */
+        --interactive-base: #2563eb;
+        --interactive-hover: #1e40af;
+        --focus-outline: #3b82f6;
         
         /* Borders & Separators */
-        --border-light: #bcbbb4;
-        --border-medium: #cccccc;
-        --border-subtle: rgba(51,51,51,0.2);
+        --border-light: #d1e5f0;
+        --border-medium: #a8cbd9;
+        --border-subtle: rgba(37, 99, 235, 0.15);
         
         /* Status Colors */
-        --status-error: #ba3e2b;
-        --status-success: #4a4a4a;
-        --status-warning: #666666;
-        --status-info: #333333;
+        --status-error: #dc2626;
+        --status-success: #16a34a;
+        --status-warning: #ea580c;
+        --status-info: #2563eb;
         
         /* Shadcn compatibility */
-        --background: 45 40% 98%;
-        --foreground: 0 0% 20%;
-        --card: 45 40% 98%;
-        --card-foreground: 0 0% 20%;
-        --popover: 45 40% 98%;
-        --popover-foreground: 0 0% 20%;
-        --primary: 0 0% 20%;
-        --primary-foreground: 45 40% 98%;
-        --secondary: 45 20% 96%;
-        --secondary-foreground: 0 0% 20%;
-        --muted: 45 20% 96%;
-        --muted-foreground: 0 0% 40%;
-        --accent: 45 20% 96%;
-        --accent-foreground: 0 0% 20%;
-        --destructive: 6 70% 46%;
-        --destructive-foreground: 45 40% 98%;
-        --border: 36 10% 74%;
-        --input: 36 10% 80%;
-        --ring: 0 0% 15%;
+        --background: 0 0% 100%;
+        --foreground: 210 45% 22%;
+        --card: 0 0% 100%;
+        --card-foreground: 210 45% 22%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 210 45% 22%;
+        --primary: 217 91% 60%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 196 50% 93%;
+        --secondary-foreground: 210 45% 22%;
+        --muted: 196 50% 93%;
+        --muted-foreground: 205 22% 48%;
+        --accent: 196 50% 93%;
+        --accent-foreground: 210 45% 22%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 200 40% 85%;
+        --input: 200 40% 85%;
+        --ring: 217 91% 60%;
         --radius: 0rem;
     }
     .dark {

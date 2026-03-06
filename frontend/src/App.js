@@ -2,11 +2,11 @@ import React from 'react';
 import { Toaster } from './components/ui/sonner';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
-import { AuthoritySection } from './components/AuthoritySection';
 import { ServicesSection } from './components/ServicesSection';
-import { QualitySection } from './components/QualitySection';
 import { GallerySection } from './components/GallerySection';
+import { QualitySection } from './components/QualitySection';
 import { FAQSection } from './components/FAQSection';
+import { AuthoritySection } from './components/AuthoritySection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ChatWidget } from './components/ChatWidget';
@@ -18,11 +18,11 @@ function App() {
       <Header />
       <main>
         <HeroSection />
-        <AuthoritySection />
         <ServicesSection />
-        <QualitySection />
         <GallerySection />
+        <QualitySection />
         <FAQSection />
+        <AuthoritySection />
         <ContactSection />
       </main>
       <Footer />

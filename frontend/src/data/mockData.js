@@ -65,17 +65,27 @@ export const premiumBrands = [
 export const beforeAfterGallery = [
   {
     id: 1,
-    before: "https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxtZWRpY2FsJTIwc3BhfGVufDB8fHx8MTc3Mjc2NzA0Nnww&ixlib=rb-4.1.0&q=85",
-    after: "https://images.unsplash.com/photo-1555820585-c5ae44394b79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBjbGluaWN8ZW58MHx8fHwxNzcyNzY3MDUwfDA&ixlib=rb-4.1.0&q=85",
-    treatment: "Armonización Facial Completa",
-    description: "Rinomodelación + Labios + Mentón"
+    before: "https://customer-assets.emergentagent.com/job_elite-facial-med/artifacts/m4m2eca8_IMG_5584.jpeg",
+    after: "https://customer-assets.emergentagent.com/job_elite-facial-med/artifacts/m4m2eca8_IMG_5584.jpeg",
+    treatment: "Rinomodelación sin Cirugía",
+    description: "Corrección de perfil nasal con resultados naturales y armónicos",
+    isSideBySide: true // Para indicar que es una imagen lado a lado
   },
   {
     id: 2,
-    before: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MHx8fHwxNzcyNzY3MDM5fDA&ixlib=rb-4.1.0&q=85",
-    after: "https://images.unsplash.com/photo-1731514771613-991a02407132?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHw0fHxmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MHx8fHwxNzcyNzY3MDM5fDA&ixlib=rb-4.1.0&q=85",
-    treatment: "Perfilado de Labios",
-    description: "Volumen natural y definición"
+    before: "https://customer-assets.emergentagent.com/job_elite-facial-med/artifacts/pqikn4zh_original-F5E1CA73-E4AD-4E35-9B44-4827576658DA.jpeg",
+    after: "https://customer-assets.emergentagent.com/job_elite-facial-med/artifacts/pqikn4zh_original-F5E1CA73-E4AD-4E35-9B44-4827576658DA.jpeg",
+    treatment: "Perfilado y Aumento de Labios",
+    description: "Volumen natural y definición perfecta",
+    isSideBySide: true
+  },
+  {
+    id: 3,
+    before: "https://customer-assets.emergentagent.com/job_elite-facial-med/artifacts/12qsnnrz_processed-87DEBEE5-184A-48C8-B80B-95F5E96FFFAA%20%281%29.jpeg",
+    after: "https://customer-assets.emergentagent.com/job_elite-facial-med/artifacts/12qsnnrz_processed-87DEBEE5-184A-48C8-B80B-95F5E96FFFAA%20%281%29.jpeg",
+    treatment: "Aumento de Labios",
+    description: "Resultado natural con productos premium",
+    isSideBySide: true
   }
 ];
 
