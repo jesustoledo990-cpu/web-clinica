@@ -1,8 +1,11 @@
-import React from 'react';
-import { ArrowRight, Award } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Award, Calendar } from 'lucide-react';
 import { heroContent } from '../data/mockData';
+import { BookingCalendar } from './BookingCalendar';
 
 export const HeroSection = () => {
+  const [showBooking, setShowBooking] = useState(false);
+
   const scrollToContact = () => {
     const element = document.getElementById('contacto');
     if (element) {
@@ -46,9 +49,9 @@ export const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button onClick={scrollToContact} className="btn-primary">
+              <button onClick={() => setShowBooking(true)} className="btn-primary">
+                <Calendar className="w-4 h-4 mr-2 inline-block" />
                 {heroContent.ctaText}
-                <ArrowRight className="w-4 h-4 ml-2 inline-block" />
               </button>
               <button 
                 onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
@@ -96,6 +99,8 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+      {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
     </section>
   );
 };

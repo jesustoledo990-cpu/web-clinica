@@ -1,8 +1,11 @@
-import React from 'react';
-import { Clock, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { Clock, TrendingUp, Calendar } from 'lucide-react';
 import { services } from '../data/mockData';
+import { BookingCalendar } from './BookingCalendar';
 
 export const ServicesSection = () => {
+  const [showBooking, setShowBooking] = useState(false);
+  
   return (
     <section id="servicios" className="section-padding" style={{ background: 'var(--bg-primary)' }}>
       <div className="container">
@@ -53,13 +56,16 @@ export const ServicesSection = () => {
 
         <div className="text-center mt-12">
           <button 
-            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => setShowBooking(true)}
             className="btn-primary"
           >
-            Consultar Pack Completo - $520.000
+            <Calendar className="w-4 h-4 mr-2 inline-block" />
+            Agendar Pack Completo - $520.000
           </button>
         </div>
       </div>
+      
+      {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
     </section>
   );
 };

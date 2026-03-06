@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Calendar } from 'lucide-react';
 import { clinicInfo } from '../data/mockData';
+import { BookingCalendar } from './BookingCalendar';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showBooking, setShowBooking] = useState(false);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -57,7 +59,8 @@ export const Header = () => {
               <Phone className="w-4 h-4" />
               {clinicInfo.phone}
             </a>
-            <button onClick={() => scrollToSection('contacto')} className="btn-primary">
+            <button onClick={() => setShowBooking(true)} className="btn-primary">
+              <Calendar className="w-4 h-4 mr-2 inline-block" />
               Reservar Evaluación
             </button>
           </div>
@@ -108,7 +111,8 @@ export const Header = () => {
                 </a>
               </li>
               <li>
-                <button onClick={() => scrollToSection('contacto')} className="btn-primary w-full">
+                <button onClick={() => setShowBooking(true)} className="btn-primary w-full">
+                  <Calendar className="w-4 h-4 mr-2 inline-block" />
                   Reservar Evaluación
                 </button>
               </li>
@@ -116,6 +120,8 @@ export const Header = () => {
           </nav>
         )}
       </div>
+      
+      {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
     </header>
   );
 };

@@ -37,7 +37,7 @@ Crear una Landing Page de alta gama para una Clínica de Medicina Estética Faci
 1. **Header/Navigation**
    - Sticky header with smooth scroll navigation
    - Mobile responsive menu
-   - Phone CTA + Reservation button
+   - Phone CTA + Reservation button with calendar icon
 
 2. **Hero Section**
    - Value proposition messaging
@@ -45,6 +45,7 @@ Crear una Landing Page de alta gama para una Clínica de Medicina Estética Faci
    - Dual CTAs (Primary + Secondary)
    - Statistics badges (500+ patients, 98% recommendation)
    - Premium certification badge
+   - **NEW: Integrated booking calendar modal**
 
 3. **Authority Section**
    - University credentials display (PUC + Queen Mary)
@@ -57,7 +58,7 @@ Crear una Landing Page de alta gama para una Clínica de Medicina Estética Faci
      * Rinomodelación sin Cirugía
      * Definición de Mentón
    - Duration and recovery info per service
-   - Pack CTA button
+   - **NEW: Pack CTA with booking calendar integration**
 
 5. **Quality/Premium Brands Section**
    - Premium product showcases
@@ -80,6 +81,7 @@ Crear una Landing Page de alta gama para una Clínica de Medicina Estética Faci
      * Results longevity
      * Post-treatment care
      * Pain/discomfort levels
+   - **NEW: Booking calendar CTA**
 
 8. **Contact Section**
    - Full contact form (name, email, phone, service, message)
@@ -101,6 +103,33 @@ Crear una Landing Page de alta gama para una Clínica de Medicina Estética Faci
     - Chat window with conversation history
     - Mock responses for common queries (pricing, appointments, treatments)
     - Conversational interface
+
+11. **🆕 Interactive Booking Calendar System**
+    - **Multi-step booking flow with 4 steps**:
+      * Step 1: Service selection (visual cards with images)
+      * Step 2: Date & time selection (integrated calendar + time slots)
+      * Step 3: Personal information form
+      * Step 4: Confirmation with booking code
+    - **Features**:
+      * Shadcn Calendar component with Spanish localization
+      * Dynamic time slot availability based on date
+      * Disabled Sundays and past dates
+      * Limited Saturday hours (10 AM - 2 PM)
+      * Progress indicator across all steps
+      * Back navigation to change selections
+      * Booking summary at each step
+      * Confirmation code generation
+      * Toast notifications
+    - **Integration points**:
+      * Header navigation button
+      * Hero section primary CTA
+      * Services section Pack CTA
+      * FAQ section CTA
+    - **Mock booking logic**:
+      * Available time slots: 9 AM - 6 PM weekdays
+      * Reduced hours on Saturdays
+      * Closed Sundays
+      * Real-time slot loading simulation
 
 ### Mock Data Structure
 - All data in `/app/frontend/src/data/mockData.js`
