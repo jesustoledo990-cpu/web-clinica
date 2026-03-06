@@ -18,13 +18,13 @@ export const HeroSection = () => {
       <div className="container">
         <div className="grid-two-column">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ 
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{
               background: 'var(--bg-secondary)',
               border: '1px solid var(--border-light)'
             }}>
               <Award className="w-4 h-4" style={{ color: 'var(--text-secondary)' }} />
-              <span className="body-small" style={{ color: 'var(--text-secondary)' }}>
-                Formación Internacional de Élite
+              <span className="body-small !text-[#4A6B7C]" style={{ color: 'var(--text-secondary)' }}>Máxima calidad en procedimientos esteticos
+
               </span>
             </div>
 
@@ -36,7 +36,7 @@ export const HeroSection = () => {
               {heroContent.subtitle}
             </p>
 
-            <div className="p-6 rounded-none" style={{ 
+            <div className="p-6 rounded-none" style={{
               background: 'var(--bg-secondary)',
               border: '1px solid var(--border-light)'
             }}>
@@ -53,10 +53,10 @@ export const HeroSection = () => {
                 <Calendar className="w-4 h-4 mr-2 inline-block" />
                 {heroContent.ctaText}
               </button>
-              <button 
+              <button
                 onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-secondary"
-              >
+                className="btn-secondary">
+
                 Conocer más
               </button>
             </div>
@@ -83,14 +83,14 @@ export const HeroSection = () => {
               src={heroContent.image}
               alt="Medicina Estética Facial"
               className="w-full h-[600px] object-cover rounded-none shadow-lg"
-              style={{ border: '1px solid var(--border-light)' }}
-            />
+              style={{ border: '1px solid var(--border-light)' }} />
+
             <div className="absolute bottom-8 left-8 right-8 p-6 backdrop-blur-md rounded-none"
-              style={{ 
-                background: 'rgba(255, 254, 242, 0.9)',
-                border: '1px solid var(--border-light)'
-              }}
-            >
+            style={{
+              background: 'rgba(255, 254, 242, 0.9)',
+              border: '1px solid var(--border-light)'
+            }}>
+
               <p className="body-large font-bold mb-2">Certificación Internacional</p>
               <p className="body-regular" style={{ color: 'var(--text-secondary)' }}>
                 Master of Science en Medicina Estética - Queen Mary University of London
@@ -101,6 +101,6 @@ export const HeroSection = () => {
       </div>
       
       {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
-    </section>
-  );
+    </section>);
+
 };
