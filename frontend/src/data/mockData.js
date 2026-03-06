@@ -54,10 +54,10 @@ export const services = [
 }];
 
 
-export const premiumBrands = ["Juvederm\xAE ", "Maili\xAE ",
+export const premiumBrands = ["Juvederm\xAE ", "Maili\xAE ", "Modelha\xAE ",
 
 
-"Belotero® Balance",
+
 "Stylage®", ""];
 
 
