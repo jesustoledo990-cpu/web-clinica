@@ -6,7 +6,6 @@ import { ServicesSection } from './components/ServicesSection';
 import { GallerySection } from './components/GallerySection';
 import { QualitySection } from './components/QualitySection';
 import { FAQSection } from './components/FAQSection';
-import { AuthoritySection } from './components/AuthoritySection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ChatWidget } from './components/ChatWidget';
@@ -22,7 +21,6 @@ function App() {
         <GallerySection />
         <QualitySection />
         <FAQSection />
-        <AuthoritySection />
         <ContactSection />
       </main>
       <Footer />

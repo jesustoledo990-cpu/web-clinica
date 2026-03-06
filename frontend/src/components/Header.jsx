@@ -19,9 +19,14 @@ export const Header = () => {
     <header className="navigation-header">
       <div className="container">
         <div className="flex items-center justify-between">
-          <a href="/" className="navigation-logo">
-            Dr. {clinicInfo.doctorName.split(' ')[1]}
-           Madrigal</a>
+          <a href="/" className="flex items-center">
+            <img 
+              src={clinicInfo.logo} 
+              alt="Dr. J. Madrigal"
+              className="h-12 w-auto"
+              style={{ maxHeight: '48px' }}
+            />
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
@@ -34,11 +39,6 @@ export const Header = () => {
               <li>
                 <button onClick={() => scrollToSection('resultados')} className="navigation-link">
                   Resultados
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('especialista')} className="navigation-link">
-                  El Especialista
                 </button>
               </li>
               <li>
@@ -69,15 +69,15 @@ export const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2"
-            aria-label="Toggle menu">
-
+            aria-label="Toggle menu"
+          >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen &&
-        <nav className="lg:hidden pt-6 pb-4">
+        {isMenuOpen && (
+          <nav className="lg:hidden pt-6 pb-4">
             <ul className="flex flex-col gap-4">
               <li>
                 <button onClick={() => scrollToSection('servicios')} className="navigation-link">
@@ -87,11 +87,6 @@ export const Header = () => {
               <li>
                 <button onClick={() => scrollToSection('resultados')} className="navigation-link">
                   Resultados
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('especialista')} className="navigation-link">
-                  El Especialista
                 </button>
               </li>
               <li>
@@ -118,10 +113,10 @@ export const Header = () => {
               </li>
             </ul>
           </nav>
-        }
+        )}
       </div>
       
       {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
-    </header>);
-
+    </header>
+  );
 };

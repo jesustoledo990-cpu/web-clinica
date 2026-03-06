@@ -14,9 +14,12 @@ export const clinicInfo = {
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Queen_Mary_University_of_London_logo.svg/1200px-Queen_Mary_University_of_London_logo.svg.png"
   }],
 
-  phone: "+56 9 1234 5678",
-  whatsapp: "+56912345678",
-  email: "contacto@drmadrigal.cl"
+  phone: "+56 9 8304 9976",
+  whatsapp: "+56983049976",
+  email: "contacto@drmadrigal.cl",
+  instagram: "https://www.instagram.com/drjmadrigal/",
+  facebook: "",
+  logo: "https://customer-assets.emergentagent.com/job_elite-facial-med/artifacts/ur20px9x_Logo%205.png"
 };
 
 export const heroContent = {
@@ -54,7 +57,7 @@ export const services = [
 }];
 
 
-export const premiumBrands = ["Juvederm\xAE ", "Maili\xAE ", "Modelha\xAE ", "", ""];
+export const premiumBrands = ["Juvederm®", "Maili®", "Modelha®"];
 
 
 

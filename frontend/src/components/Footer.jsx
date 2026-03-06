@@ -121,7 +121,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderTop: '1px solid var(--border-light)' }}>
           <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
-            © {currentYear} Dr. {clinicInfo.doctorName}. Todos los derechos reservados.
+            © {currentYear} Dr. J. Madrigal. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
             <a href="#" className="body-small hover:underline" style={{ color: 'var(--text-secondary)' }}>
