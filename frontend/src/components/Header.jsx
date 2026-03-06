@@ -20,12 +20,12 @@ export const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center">
-            <img 
-              src={clinicInfo.logo} 
+            <img
+              src={clinicInfo.logo}
               alt="Dr. J. Madrigal"
-              className="h-12 w-auto"
-              style={{ maxHeight: '48px' }}
-            />
+              className="h-12 w-auto !mx-[10px] !rounded-t-[200px] !rounded-b-[200px] !rounded-l-[200px] !rounded-r-[200px]"
+              style={{ maxHeight: '48px' }} />
+
           </a>
 
           {/* Desktop Navigation */}
@@ -69,15 +69,15 @@ export const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2"
-            aria-label="Toggle menu"
-          >
+            aria-label="Toggle menu">
+
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="lg:hidden pt-6 pb-4">
+        {isMenuOpen &&
+        <nav className="lg:hidden pt-6 pb-4">
             <ul className="flex flex-col gap-4">
               <li>
                 <button onClick={() => scrollToSection('servicios')} className="navigation-link">
@@ -113,10 +113,10 @@ export const Header = () => {
               </li>
             </ul>
           </nav>
-        )}
+        }
       </div>
       
       {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
-    </header>
-  );
+    </header>);
+
 };
