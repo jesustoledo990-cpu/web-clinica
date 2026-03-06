@@ -18,7 +18,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="heading-3 mb-4">Dr. {clinicInfo.doctorName.split(' ')[1]}</h3>
+            <h3 className="heading-3 mb-4">Dr. {clinicInfo.doctorName.split(' ')[1]} Madrigal</h3>
             <p className="body-regular mb-4" style={{ color: 'var(--text-secondary)' }}>
               Medicina Estética Facial de Élite con formación internacional.
             </p>
@@ -29,8 +29,8 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-smooth hover-lift"
                 style={{ border: '1px solid var(--border-medium)' }}
-                aria-label="Instagram"
-              >
+                aria-label="Instagram">
+
                 <Instagram className="w-5 h-5" />
               </a>
               <a
@@ -39,8 +39,8 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-smooth hover-lift"
                 style={{ border: '1px solid var(--border-medium)' }}
-                aria-label="Facebook"
-              >
+                aria-label="Facebook">
+
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -133,6 +133,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
