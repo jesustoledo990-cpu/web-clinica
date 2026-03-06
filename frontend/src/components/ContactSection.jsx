@@ -87,8 +87,8 @@ export const ContactSection = () => {
                     border: '1px solid var(--border-medium)',
                     color: 'var(--text-primary)'
                   }}
-                  placeholder="Ingresa tu nombre"
-                />
+                  placeholder="Ingresa tu nombre" />
+
               </div>
 
               <div>
@@ -108,8 +108,8 @@ export const ContactSection = () => {
                     border: '1px solid var(--border-medium)',
                     color: 'var(--text-primary)'
                   }}
-                  placeholder="tu@email.com"
-                />
+                  placeholder="tu@email.com" />
+
               </div>
 
               <div>
@@ -129,8 +129,8 @@ export const ContactSection = () => {
                     border: '1px solid var(--border-medium)',
                     color: 'var(--text-primary)'
                   }}
-                  placeholder="+56 9 1234 5678"
-                />
+                  placeholder="+56 9 1234 5678" />
+
               </div>
 
               <div>
@@ -147,8 +147,8 @@ export const ContactSection = () => {
                     background: 'var(--bg-primary)',
                     border: '1px solid var(--border-medium)',
                     color: 'var(--text-primary)'
-                  }}
-                >
+                  }}>
+
                   <option value="">Selecciona un servicio</option>
                   <option value="pack-completo">Pack Armonización de Perfil Completo</option>
                   <option value="labios">Perfilado y Aumento de Labios</option>
@@ -174,25 +174,25 @@ export const ContactSection = () => {
                     border: '1px solid var(--border-medium)',
                     color: 'var(--text-primary)'
                   }}
-                  placeholder="Cuéntanos sobre tus expectativas..."
-                />
+                  placeholder="Cuéntanos sobre tus expectativas..." />
+
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="btn-primary w-full flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <>
+                className="btn-primary w-full flex items-center justify-center gap-2">
+
+                {isSubmitting ?
+                <>
                     <div className="loading-dots">Enviando...</div>
-                  </>
-                ) : (
-                  <>
+                  </> :
+
+                <>
                     <Send className="w-4 h-4" />
                     Enviar Consulta
                   </>
-                )}
+                }
               </button>
             </form>
 
@@ -204,8 +204,8 @@ export const ContactSection = () => {
                   background: '#25D366',
                   color: 'white',
                   border: 'none'
-                }}
-              >
+                }}>
+
                 <MessageSquare className="w-5 h-5" />
                 <span className="button-text">Contactar por WhatsApp</span>
               </button>
@@ -214,7 +214,7 @@ export const ContactSection = () => {
 
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="p-8 rounded-none" style={{ 
+            <div className="p-8 rounded-none" style={{
               background: 'var(--bg-secondary)',
               border: '1px solid var(--border-light)'
             }}>
@@ -225,7 +225,7 @@ export const ContactSection = () => {
                   <Phone className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: 'var(--text-primary)' }} />
                   <div>
                     <p className="body-large font-bold mb-1">Teléfono</p>
-                    <a href={`tel:${clinicInfo.phone}`} className="body-regular" style={{ color: 'var(--text-secondary)' }}>
+                    <a href={`tel:${clinicInfo.phone}`} className="+56 9 8304 9976" style={{ color: 'var(--text-secondary)' }}>
                       {clinicInfo.phone}
                     </a>
                   </div>
@@ -254,7 +254,7 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="p-8 rounded-none" style={{ 
+            <div className="p-8 rounded-none" style={{
               background: 'var(--bg-secondary)',
               border: '1px solid var(--border-light)'
             }}>
@@ -279,11 +279,11 @@ export const ContactSection = () => {
               src="https://images.pexels.com/photos/5042612/pexels-photo-5042612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               alt="Clínica"
               className="w-full h-64 object-cover rounded-none"
-              style={{ border: '1px solid var(--border-light)' }}
-            />
+              style={{ border: '1px solid var(--border-light)' }} />
+
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
