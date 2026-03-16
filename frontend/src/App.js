@@ -2,13 +2,14 @@ import React from 'react';
 import { Toaster } from './components/ui/sonner';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
+import DoctorProfile from './components/DoctorSection';
 import { ServicesSection } from './components/ServicesSection';
 import { GallerySection } from './components/GallerySection';
 import { QualitySection } from './components/QualitySection';
 import { FAQSection } from './components/FAQSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import { ChatWidget } from './components/ChatWidget';
+import { WhatsAppButton } from './components/WhatsappButton';
 import './App.css';
 
 function App() {
@@ -18,13 +19,14 @@ function App() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <DoctorProfile />
         <GallerySection />
         <QualitySection />
         <FAQSection />
         <ContactSection />
+        <WhatsAppButton />
       </main>
       <Footer />
-      <ChatWidget />
       <Toaster 
         position="top-right"
         toastOptions={{

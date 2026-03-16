@@ -28,22 +28,54 @@ export const GallerySection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Image Display */}
-          <div className="relative rounded-none overflow-hidden" style={{ 
+          
+          {/* Contenedor de la Imagen y Botones Laterales */}
+          {/* Añadimos 'group' para poder hacer efectos hover en el futuro si quieres */}
+          <div className="relative overflow-hidden rounded-2xl shadow-lg" style={{ 
             minHeight: '600px',
             border: '1px solid var(--border-light)',
             background: 'var(--bg-secondary)'
           }}>
+            
+            {/* Botón Anterior (Izquierda) */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md"
+              style={{
+                border: '1px solid var(--border-medium)',
+                background: 'var(--bg-primary)',
+                color: 'var(--text-primary)'
+              }}
+              aria-label="Anterior"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            {/* Imagen Principal */}
             <img
               src={currentItem.before}
               alt={currentItem.treatment}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain absolute inset-0 m-auto"
               style={{ maxHeight: '600px' }}
             />
+
+            {/* Botón Siguiente (Derecha) */}
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md"
+              style={{
+                border: '1px solid var(--border-medium)',
+                background: 'var(--bg-primary)',
+                color: 'var(--text-primary)'
+              }}
+              aria-label="Siguiente"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
           </div>
 
-          {/* Treatment Info */}
-          <div className="mt-6 text-center p-6 rounded-none" style={{ 
+          {/* Información del Tratamiento */}
+          <div className="mt-6 text-center p-6 rounded-2xl shadow-sm" style={{ 
             background: 'var(--bg-secondary)',
             border: '1px solid var(--border-light)'
           }}>
@@ -53,46 +85,21 @@ export const GallerySection = () => {
             </p>
           </div>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <button
-              onClick={goToPrevious}
-              className="w-12 h-12 rounded-full flex items-center justify-center transition-smooth hover-lift"
-              style={{
-                border: '1px solid var(--border-medium)',
-                background: 'var(--bg-primary)'
-              }}
-              aria-label="Previous"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-
-            <div className="flex gap-2">
-              {beforeAfterGallery.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className="w-3 h-3 rounded-full transition-smooth"
-                  style={{
-                    background: index === activeIndex ? 'var(--interactive-base)' : 'var(--border-light)'
-                  }}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={goToNext}
-              className="w-12 h-12 rounded-full flex items-center justify-center transition-smooth hover-lift"
-              style={{
-                border: '1px solid var(--border-medium)',
-                background: 'var(--bg-primary)'
-              }}
-              aria-label="Next"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+          {/* Navegación por Puntos (Dots) */}
+          <div className="flex items-center justify-center gap-3 mt-8">
+            {beforeAfterGallery.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className="w-3 h-3 rounded-full transition-smooth hover:scale-125"
+                style={{
+                  background: index === activeIndex ? 'var(--interactive-base)' : 'var(--border-light)'
+                }}
+                aria-label={`Ir a foto ${index + 1}`}
+              />
+            ))}
           </div>
+          
         </div>
       </div>
     </section>

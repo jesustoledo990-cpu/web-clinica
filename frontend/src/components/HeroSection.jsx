@@ -60,18 +60,13 @@ export const HeroSection = () => {
 
             <div className="flex items-center gap-6 pt-4">
               <div>
-                <div className="heading-2">500+</div>
+                <div className="heading-2">2000+</div>
                 <div className="body-small" style={{ color: 'var(--text-secondary)' }}>
                   Pacientes Satisfechos
                 </div>
               </div>
               <div style={{ width: '1px', height: '40px', background: 'var(--border-light)' }}></div>
-              <div>
-                <div className="heading-2">98%</div>
-                <div className="body-small" style={{ color: 'var(--text-secondary)' }}>
-                  Recomendación
-                </div>
-              </div>
+              
             </div>
           </div>
 

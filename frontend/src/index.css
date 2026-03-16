@@ -1,139 +1,278 @@
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
 
+
+
 body {
+
     margin: 0;
+
     font-family:
+
         -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+
         sans-serif;
+
     -webkit-font-smoothing: antialiased;
+
     -moz-osx-font-smoothing: grayscale;
+
 }
+
+
 
 code {
+
     font-family:
+
         source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+
 }
 
+
+
 @layer base {
+
     :root {
+
         /* Primary Backgrounds - Clean Blue & White */
+
         --bg-primary: #ffffff;
-        --bg-secondary: #e8f4f8;
-        --bg-accent: #d0e8f2;
-        --bg-subtle: #f0f9fc;
-        
+
+        --bg-secondary: #a8bbe7;
+
+        --bg-accent: #ced583;
+
+        --bg-subtle: #ffffff;
+
+       
+
         /* Text Hierarchy - Blue tones */
-        --text-primary: #1a3a52;
+
+        --text-primary: #112250;
+
         --text-secondary: #4a6b7c;
+
         --text-light: #8fa9b8;
+
         --text-meta: #5a7a8a;
-        
+
+       
+
         /* Interactive States - Vibrant Blue */
+
         --interactive-base: #2563eb;
+
         --interactive-hover: #1e40af;
+
         --focus-outline: #3b82f6;
-        
+
+       
+
         /* Borders & Separators */
+
         --border-light: #d1e5f0;
+
         --border-medium: #a8cbd9;
+
         --border-subtle: rgba(37, 99, 235, 0.15);
-        
+
+       
+
         /* Status Colors */
+
         --status-error: #dc2626;
+
         --status-success: #16a34a;
+
         --status-warning: #ea580c;
+
         --status-info: #2563eb;
-        
+
+       
+
         /* Shadcn compatibility */
+
         --background: 0 0% 100%;
+
         --foreground: 210 45% 22%;
+
         --card: 0 0% 100%;
+
         --card-foreground: 210 45% 22%;
+
         --popover: 0 0% 100%;
+
         --popover-foreground: 210 45% 22%;
+
         --primary: 217 91% 60%;
+
         --primary-foreground: 0 0% 100%;
+
         --secondary: 196 50% 93%;
+
         --secondary-foreground: 210 45% 22%;
+
         --muted: 196 50% 93%;
+
         --muted-foreground: 205 22% 48%;
+
         --accent: 196 50% 93%;
+
         --accent-foreground: 210 45% 22%;
+
         --destructive: 0 84% 60%;
+
         --destructive-foreground: 0 0% 100%;
+
         --border: 200 40% 85%;
+
         --input: 200 40% 85%;
+
         --ring: 217 91% 60%;
+
         --radius: 0rem;
+
     }
+
     .dark {
+
         --background: 0 0% 3.9%;
+
         --foreground: 0 0% 98%;
+
         --card: 0 0% 3.9%;
+
         --card-foreground: 0 0% 98%;
+
         --popover: 0 0% 3.9%;
+
         --popover-foreground: 0 0% 98%;
+
         --primary: 0 0% 98%;
+
         --primary-foreground: 0 0% 9%;
+
         --secondary: 0 0% 14.9%;
+
         --secondary-foreground: 0 0% 98%;
+
         --muted: 0 0% 14.9%;
+
         --muted-foreground: 0 0% 63.9%;
+
         --accent: 0 0% 14.9%;
+
         --accent-foreground: 0 0% 98%;
+
         --destructive: 0 62.8% 30.6%;
+
         --destructive-foreground: 0 0% 98%;
+
         --border: 0 0% 14.9%;
+
         --input: 0 0% 14.9%;
+
         --ring: 0 0% 83.1%;
+
         --chart-1: 220 70% 50%;
+
         --chart-2: 160 60% 45%;
+
         --chart-3: 30 80% 55%;
+
         --chart-4: 280 65% 60%;
+
         --chart-5: 340 75% 55%;
+
     }
+
 }
 
+
+
 @layer base {
+
     * {
+
         @apply border-border;
+
     }
+
     body {
+
         @apply bg-background text-foreground;
+
     }
+
 }
 
+
+
 @layer base {
+
     [data-debug-wrapper="true"] {
+
         display: contents !important;
+
     }
+
+
 
     [data-debug-wrapper="true"] > * {
+
         margin-left: inherit;
+
         margin-right: inherit;
+
         margin-top: inherit;
+
         margin-bottom: inherit;
+
         padding-left: inherit;
+
         padding-right: inherit;
+
         padding-top: inherit;
+
         padding-bottom: inherit;
+
         column-gap: inherit;
+
         row-gap: inherit;
+
         gap: inherit;
+
         border-left-width: inherit;
+
         border-right-width: inherit;
+
         border-top-width: inherit;
+
         border-bottom-width: inherit;
+
         border-left-style: inherit;
+
         border-right-style: inherit;
+
         border-top-style: inherit;
+
         border-bottom-style: inherit;
+
         border-left-color: inherit;
+
         border-right-color: inherit;
+
         border-top-color: inherit;
+
         border-bottom-color: inherit;
+
     }
+
 }
+
